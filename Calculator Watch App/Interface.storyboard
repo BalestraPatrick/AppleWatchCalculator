@@ -12,7 +12,7 @@
                     <items>
                         <group width="1" height="0.16" alignment="left" hasDetent="YES" id="1Sp-za-kIW" userLabel="6th">
                             <items>
-                                <button width="0.33000000000000002" height="1" alignment="left" title="/" id="cnR-WQ-VZf">
+                                <button width="0.33000000000000002" height="1" alignment="left" title="÷" id="cnR-WQ-VZf">
                                     <color key="titleColor" red="0.96376753829999995" green="0.18839655550000001" blue="0.046466775350000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="divide" destination="AgC-eL-Hgc" id="f36-fo-Sgg"/>
@@ -23,7 +23,7 @@
                         </group>
                         <group width="1" height="0.16" alignment="left" hasDetent="YES" id="QMi-Mr-xJq" userLabel="5th">
                             <items>
-                                <button width="0.33000000000000002" height="1" alignment="left" title="x" id="qTP-g5-fJe">
+                                <button width="0.33000000000000002" height="1" alignment="left" title="×" id="qTP-g5-fJe">
                                     <color key="titleColor" red="0.96376753829999995" green="0.18839655550000001" blue="0.046466775350000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="multiply" destination="AgC-eL-Hgc" id="BWs-xc-BOF"/>
@@ -151,6 +151,7 @@
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="499" y="464"/>
         </scene>
     </scenes>
 </document>
