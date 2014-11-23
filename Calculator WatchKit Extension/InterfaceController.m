@@ -8,15 +8,21 @@
 
 #import "InterfaceController.h"
 
+typedef NS_ENUM(NSUInteger, OperationType) {
+    OperationTypeUnknown,
+    OperationTypeSum,
+    OperationTypeSubtraction,
+    OperationTypeMultiplication,
+    OperationTypeDivision
+};
 
-@interface InterfaceController()
+@interface InterfaceController ()
 
 @property (strong, nonatomic) NSMutableString *displayString;
 @property (strong, nonatomic) NSString *previousNumber;
-@property (nonatomic) NSInteger currentOperation; // 1 = sum, 2 = subtraction, 3 = multiplication, 4 = division
+@property (assign, nonatomic) OperationType currentOperation;
 
 @end
-
 
 @implementation InterfaceController
 
@@ -42,50 +48,50 @@
     self.previousNumber = self.displayString;
     self.displayString = [NSMutableString string];
     [self.resultLabel setText:@"0"];
-    self.currentOperation = 4;
+    self.currentOperation = OperationTypeDivision;
 }
 
 - (IBAction)multiply {
     self.previousNumber = self.displayString;
     self.displayString = [NSMutableString string];
     [self.resultLabel setText:@"0"];
-    self.currentOperation = 3;
+    self.currentOperation = OperationTypeMultiplication;
 }
 
 - (IBAction)subtract {
     self.previousNumber = self.displayString;
     self.displayString = [NSMutableString string];
     [self.resultLabel setText:@"0"];
-    self.currentOperation = 2;
+    self.currentOperation = OperationTypeSubtraction;
 }
 
 - (IBAction)sum {
     self.previousNumber = self.displayString;
     self.displayString = [NSMutableString string];
     [self.resultLabel setText:@"0"];
-    self.currentOperation = 1;
+    self.currentOperation = OperationTypeSum;
 }
 
 - (IBAction)result {
-    if (self.currentOperation == 1) {
+    if (self.currentOperation == OperationTypeSum) {
         NSString *stringResult = [NSString stringWithFormat:@"%.1f", [self.previousNumber floatValue] + [self.displayString floatValue]];
         [self.resultLabel setText:stringResult];
         self.displayString = [stringResult mutableCopy];
-    } else if (self.currentOperation == 2) {
+    } else if (self.currentOperation == OperationTypeSubtraction) {
         NSString *stringResult = [NSString stringWithFormat:@"%.1f", [self.previousNumber floatValue] - [self.displayString floatValue]];
         [self.resultLabel setText:stringResult];
         self.displayString = [stringResult mutableCopy];
-    } else if (self.currentOperation == 3) {
+    } else if (self.currentOperation == OperationTypeMultiplication) {
         NSString *stringResult = [NSString stringWithFormat:@"%.1f", [self.previousNumber floatValue] * [self.displayString floatValue]];
         [self.resultLabel setText:stringResult];
         self.displayString = [stringResult mutableCopy];
-    } else if (self.currentOperation == 4) {
+    } else if (self.currentOperation == OperationTypeDivision) {
         NSString *stringResult = [NSString stringWithFormat:@"%.1f", [self.previousNumber floatValue] / [self.displayString floatValue]];
         [self.resultLabel setText:stringResult];
         self.displayString = [stringResult mutableCopy];
     }
     self.previousNumber = nil;
-    self.currentOperation = 0;
+    self.currentOperation = OperationTypeUnknown;
 }
 
 - (IBAction)decimal {
@@ -134,7 +140,7 @@
 
 - (IBAction)clearScreen {
     self.previousNumber = nil;
-    self.currentOperation = 0;
+    self.currentOperation = OperationTypeUnknown;
     self.displayString = [NSMutableString string];
     [self.resultLabel setText:@"0"];
 }
@@ -149,7 +155,6 @@
 - (void)addDigitToDisplay:(NSString *)string {
     [self.displayString appendString:string];
     [self.resultLabel setText:self.displayString];
-
 }
 
 @end
