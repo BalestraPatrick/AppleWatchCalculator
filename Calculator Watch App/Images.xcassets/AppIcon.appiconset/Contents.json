@@ -1,14 +1,14 @@
 {
   "images" : [
     {
-      "size" : "14.5x14.5",
+      "size" : "22x22",
       "idiom" : "watch",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "38mm"
     },
     {
-      "size" : "18x18",
+      "size" : "27.5x27.5",
       "idiom" : "watch",
       "scale" : "2x",
       "role" : "notificationCenter",
@@ -44,6 +44,7 @@
       "size" : "86x86",
       "idiom" : "watch",
       "scale" : "2x",
+      "filename" : "icon-172.png",
       "role" : "quickLook",
       "subtype" : "38mm"
     },
@@ -51,7 +52,22 @@
       "size" : "98x98",
       "idiom" : "watch",
       "scale" : "2x",
+      "filename" : "icon-196.png",
       "role" : "quickLook",
+      "subtype" : "42mm"
+    },
+    {
+      "scale" : "2x",
+      "idiom" : "watch",
+      "unassigned" : true,
+      "role" : "notificationCenter",
+      "subtype" : "38mm"
+    },
+    {
+      "scale" : "2x",
+      "idiom" : "watch",
+      "unassigned" : true,
+      "role" : "notificationCenter",
       "subtype" : "42mm"
     }
   ],

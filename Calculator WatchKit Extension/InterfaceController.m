@@ -26,22 +26,11 @@ typedef NS_ENUM(NSUInteger, OperationType) {
 
 @implementation InterfaceController
 
-- (instancetype)initWithContext:(id)context {
-    self = [super initWithContext:context];
-    if (self){
-        
-        self.displayString = [NSMutableString string];
-        
-    }
-    return self;
-}
+- (void)awakeWithContext:(id)context {
+    [super awakeWithContext:context];
 
-- (void)willActivate {
+    self.displayString = [NSMutableString string];
 
-}
-
-- (void)didDeactivate {
-    
 }
 
 - (IBAction)divide {

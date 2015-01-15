@@ -650,6 +650,7 @@
 				AE642E471A1F9A3E00901B4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE642E481A1F9A3E00901B4D /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +659,7 @@
 				AE642E4A1A1F9A3E00901B4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE642E6B1A1F9A5100901B4D /* Build configuration list for PBXNativeTarget "Calculator Watch App" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +668,7 @@
 				AE642E6D1A1F9A5100901B4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE642E6E1A1F9A5100901B4D /* Build configuration list for PBXNativeTarget "Calculator WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -674,6 +677,7 @@
 				AE642E701A1F9A5100901B4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
