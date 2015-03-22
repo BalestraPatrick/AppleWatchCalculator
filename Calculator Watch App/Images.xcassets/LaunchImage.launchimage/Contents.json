@@ -26,22 +26,6 @@
     },
     {
       "orientation" : "portrait",
-      "idiom" : "watch",
-      "extent" : "full-screen",
-      "minimum-system-version" : "8.0",
-      "subtype" : "38mm",
-      "scale" : "2x"
-    },
-    {
-      "orientation" : "portrait",
-      "idiom" : "watch",
-      "extent" : "full-screen",
-      "minimum-system-version" : "8.0",
-      "subtype" : "42mm",
-      "scale" : "2x"
-    },
-    {
-      "orientation" : "portrait",
       "idiom" : "iphone",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
