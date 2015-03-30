@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, OperationType) {
 
 @interface InterfaceController ()
 
-@property (strong, nonatomic) NSMutableString *displayString;
+@property (strong, nonatomic) NSString *displayString; // It'd be better to use a NSMutableString but there is a bug in displaying a NSMutableString in a label in WatchKit
 @property (strong, nonatomic) NSString *previousNumber;
 @property (assign, nonatomic) OperationType currentOperation;
 
@@ -29,7 +29,7 @@ typedef NS_ENUM(NSUInteger, OperationType) {
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
 
-    self.displayString = [NSMutableString string];
+    self.displayString = @"";
 
 }
 
@@ -136,13 +136,13 @@ typedef NS_ENUM(NSUInteger, OperationType) {
 
 - (IBAction)removeLastDigit {
     if (self.displayString.length > 0) {
-        [self.displayString deleteCharactersInRange:NSMakeRange(self.displayString.length - 1, 1)];
+        self.displayString = [self.displayString substringToIndex:[self.displayString length] - 1];
         [self.resultLabel setText:self.displayString];
     }
 }
 
 - (void)addDigitToDisplay:(NSString *)string {
-    [self.displayString appendString:string];
+    self.displayString = [self.displayString stringByAppendingString:string];
     [self.resultLabel setText:self.displayString];
 }
 
